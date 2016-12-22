@@ -1,0 +1,88 @@
+body {
+	font-family: Arial;
+	font-size: 12px;
+	background-color: #FFFFFF;
+	-webkit-text-size-adjust:none;
+}
+h1 {
+	font-family: Arial;
+	font-size: 18px;
+	color: black;
+	text-align: center;
+}
+h2 {
+    font-family: Arial;
+    font-size: 14px;
+    color: black;
+}
+
+.courtesyof { font-size: 8pt; }
+.photo-wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    background-color: #eeeeee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.photo {
+    border: 2px;
+    border-color: #428bca;
+    border-style: solid;
+}
+
+table {
+	font-family: Arial;
+	font-size: 12px;
+}
+td {
+    vertical-align: top;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.more {
+    margin: 0px;
+    padding: 0px;
+}
+.more_link {
+    padding: 0px 0px;
+    cursor: pointer;
+    position: relative;
+    color: blue;
+    font-style: italic;
+    margin: 0px;
+}
+.more_body {
+    padding: 0px 0px 15px;
+}
+
+.plate {
+  position: relative;
+  width: 260px; height: 92px;
+  text-align: center;
+  float: left;
+  background-image: url(/graphics/brass-plate-1.jpg);
+  background-repeat: no-repeat;
+}
+.inscription {
+    position: absolute; 
+    top: 50%; 
+    width:260px; height:92px; 
+    margin-top:-22px;
+    text-align:center;
+
+    font-family: Arial;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+#topbuttondiv.affix {
+  position: fixed;
+  top: 60px;
+  bottom: 60px;
+  right: 10px;
+}

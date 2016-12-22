@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Dynamic Hover Slider</title>
+            <script type="text/javascript" src="js/jquery.min.js"></script>
+            <script type="text/javascript" src="js/hover_transition_slider.js"></script>
+            <link href="css/reset-fonts-grids.css" rel="stylesheet" type="text/css" />
+            <style type="text/css">
+                #container {margin: 0 auto; width: 960px; padding-top: 60px;}
+                #slider {position: relative; width: 600px; height: 375px; margin: 0 auto;}
+                #slider img {position: absolute; top: 0; left: 0;}
+                #slider .prev {bottom: 40%; left: 0px;}
+                #slider .next {bottom: 40%; right: 0px;}
+                #slider_thumbnails li {display: inline; margin-right: 15px;}
+                #slider_thumbnails {text-align: center; margin-top: 30px;}
+                h4 {font-size: 18px; font-weight: bold; margin-bottom: 15px;}                
+                .clear {clear:both;}
+            </style>
+        </head>
+        <body>
+            <div id="container">
+                <div id="body">
+                    <div id="slider">
+                    </div>
+                    <ul id="slider_thumbnails">
+                        <li><a href="#"><img src="img/2/t1.jpg"/></a></li>
+                        <li><a href="#"><img src="img/2/t2.jpg"/></a></li>
+                        <li><a href="#"><img src="img/2/t3.jpg"/></a></li>
+                        <li><a href="#"><img src="img/2/t4.jpg"/></a></li>
+                        <li><a href="#"><img src="img/2/t5.jpg"/></a></li>
+                        <li><a href="#"><img src="img/2/t6.jpg"/></a></li>
+                    </ul>
+                    <div class="clear"></div>
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+                            var imgs = ['img/2/1.jpg', 'img/2/2.jpg', 'img/2/3.jpg', 'img/2/4.jpg', 'img/2/5.jpg', 'img/2/6.jpg'];                            
+                            $('#slider').append('<img src="img/loader.gif" id="slider_loader" style="position:absolute; top:45%; left:45%;"/>');
+                            
+                            try{
+                            $.preloadImages(imgs, function(){
+                                $('#slider_loader').remove();
+                                $('#slider').find('img:first').show();
+                                $('#slider_thumbnails').imgSlider('#slider', imgs, 'right');                                
+                            });
+                            }catch(e){alert(e.message);}
+                        });
+                    </script>	
+                </div>
+            </div>
+        </body>
+    </html>       

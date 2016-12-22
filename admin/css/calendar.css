@@ -1,0 +1,62 @@
+.fc-widget-content {
+    cursor: pointer;
+}
+.major, .fc-event-skin .fc-event:hover {
+    background-color: #428bca; /* background color */
+    border-color: blue;     /* border color */
+    color: white;           /* text color */
+    font-weight: bold;
+    }
+.minor, .minor:hover, .minor .fc-event-skin {
+    background-color: white;
+    border-color: white;
+    color: black;
+    }
+.appendant, .appendant:hover, .appendant .fc-event-skin {
+    background-color: #daa520;
+    border-color: yellow;
+    color: black;
+    }
+.elsewhere, .elsewhere .fc-event-skin {
+    background-color: green;
+    border-color: green;
+    color: white;
+    }
+.memorial, .memorial .fc-event-skin {
+    border-color: black;
+    background-color: black;
+    color: white;
+    }
+.holiday, .holiday:hover, .holiday .fc-event-skin {
+    border-color: white;
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    }
+
+/* for list view */
+td {
+    font-size: 14px;
+}
+td.major, .keymajor {
+    background-color: white;
+    font-weight: bold;
+    color: blue;
+    }
+td.minor, .keyminor {
+    background-color: white;
+    color: black;
+    }
+td.appendant, .keyappendant {
+    background-color: white;
+    color: brown;
+    }
+td.elsewhere, .keyelsewhere {
+    background-color: white;
+    color: darkgreen;
+    }
+td.memorial, .keymemorial {
+    background-color: black;
+    border-color: black;
+    color: white;
+    }

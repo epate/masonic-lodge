@@ -1,0 +1,13 @@
+for file in `ls -1t *.pdf`
+do
+	base=`echo $file | sed 's/.pdf//'`
+	gif=${base}.gif
+
+	chmod 666 $file
+	if [ ! -f "previews/$gif" -o "$file" -nt "previews/$gif" ]
+	then
+		echo "creating $gif..."
+		# to only convert the first page, change $file to $file[0]
+		convert +debug -alpha off -colorspace cmyk -thumbnail 300 -units PixelsPerInch -delay 200 $file previews/$gif 2>/dev/null
+	fi
+done

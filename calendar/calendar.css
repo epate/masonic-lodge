@@ -1,0 +1,65 @@
+.fc-day-grid-event .fc-content {
+    white-space: normal;
+}
+.major, .major .fc-event-skin {
+    background-color: #428bca; /* background color */
+    border-color: blue;     /* border color */
+    color: white;           /* text color */
+    font-weight: bold;
+    pointer-events: none;
+    }
+.minor, .minor .fc-event-skin {
+    background-color: white;
+    border-color: white;
+    color: black;
+    pointer-events: none;
+    }
+.appendant, .appendant .fc-event-skin {
+    background-color: #daa520;
+    border-color: yellow;
+    color: black;
+    pointer-events: none;
+    }
+.elsewhere, .elsewhere .fc-event-skin {
+    background-color: green;
+    border-color: green;
+    color: white;
+    pointer-events: none;
+    }
+.memorial, .memorial .fc-event-skin {
+    border-color: black;
+    background-color: black;
+    color: white;
+    pointer-events: none;
+    }
+/* for list view */
+td {
+    font-size: 14px;
+}
+td.major, .keymajor {
+    background-color: white;
+    font-weight: bold;
+    color: blue;
+    pointer-events: none;
+    }
+td.minor, .keyminor {
+    background-color: white;
+    color: black;
+    pointer-events: none;
+    }
+td.appendant, .keyappendant {
+    background-color: white;
+    color: brown;
+    pointer-events: none;
+    }
+td.elsewhere, .keyelsewhere {
+    background-color: white;
+    color: darkgreen;
+    pointer-events: none;
+    }
+td.memorial, .keymemorial {
+    background-color: black;
+    border-color: black;
+    color: white;
+    pointer-events: none;    
+    }
