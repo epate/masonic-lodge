@@ -4,7 +4,6 @@
  * original color: #428bca;
  * orginal dark color: #3276b1;
  */
-
 html,
 body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
@@ -19,12 +18,12 @@ h1 {
 	font-size: 26px;
 }
 .btn-primary {
-    background-color: orange;
-    border-color: darkorange;
+    background-color: var(--main-color);
+    border-color: var(--main-color-dark);
 }
 .btn-primary:hover {
-    background-color: darkorange;
-    border-color: darkorange;
+    background-color: var(--main-color-dark);
+    border-color: var(--main-color-dark);
 }
 .img-responsive {
     display: inline;
@@ -108,7 +107,7 @@ h1 {
   font-weight: 200;
   line-height: 1;
   color: inherit;
-  background-color: orange; // #eeeeee;
+  background-color: var(--main-color); // #eeeeee;
 }
 
 .list-group {
@@ -122,17 +121,17 @@ h1 {
   padding: 5px 15px;
   margin-bottom: -1px;
   color: white;
-  background-color: orange;
-  border: 1px solid orange;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 a.list-group-item {
   color: white;
-  background-color: orange;
-  border: 1px solid orange;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 a.list-group-item:hover {
-    background-color: darkorange;
-    border: 1px solid darkorange;
+    background-color: var(--main-color-dark);
+    border: 1px solid var(--main-color-dark);
 }
 
 .navbar {

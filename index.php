@@ -93,7 +93,7 @@ $year = 2017;
 	    <h1 align=center class="visible-sm visible-md visible-lg"><?= $cnf_lodgeNameNumber ?></h1>
 	    <p align=center style="color:white">
 	      <small>
-		Our lodge description...
+		<?= $cnf_lodgeDescription ?>
 		<br clear=all>
 	      </small>
 	    </p>

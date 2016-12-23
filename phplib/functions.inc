@@ -3,6 +3,15 @@
 date_default_timezone_set("America/New_York");
 $sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/database.db");
 
+echo "
+<style>
+:root {
+    --main-color: $cnf_mainColor;
+    --main-color-dark: $cnf_mainColorDark;
+}
+</style>
+";
+
 function getlastmod_multi()
 {
     $numargs = func_num_args();
