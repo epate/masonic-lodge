@@ -57,7 +57,8 @@ function GetPastMasters($table, $ylink)
     while ($row = $results->fetchArray(SQLITE3_ASSOC))
         {
             $Biography = $row['Biography'] . "\n";
-            $Biography = preg_replace("/(.*)\n/", "<li>\\1<br/>\n", $Biography);
+	    $Biography = preg_replace("/(.*)\n/", "<li>\\1<br/>\n", $Biography);
+
             if (substr_count($Biography, "\n") > 5)
                 {
                     $o = strpos_offset_recursive("<br/>", $Biography, 5);
@@ -91,9 +92,12 @@ function GetPastMasters($table, $ylink)
             echo "      </div>\n";
             echo "      <div style=\"margin-left:130px;\">\n";
             echo "	<h2>$row[Name]</h2>\n";
-            echo "	<ul>\n";
-            echo "$Biography\n";
-            echo "	</ul>\n";
+	    if (strlen($Biography) > 10)
+	      {
+		echo "	<ul>\n";
+		echo "$Biography\n";
+		echo "	</ul>\n";
+	      }
             echo "      </div>\n";
             echo "    </div>\n";
             echo "  </div>\n";
