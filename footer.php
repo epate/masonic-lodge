@@ -15,7 +15,7 @@
 
 <footer>
 Page Last Updated: <?= strftime("%D %r", getlastmod()); ?><br>
-Questions or comments can be sent to <a href=mailto:webmaster@kempsvillelodge.org>webmaster@kempsvillelodge.org</a>
+Questions or comments can be sent to <a href=mailto:<?= $cnf_webmaster ?>><?= $cnf_webmaster ?></a>
 </footer>
 
 </div>
