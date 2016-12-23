@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('America/New_York');
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/database.db");
+include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
+$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/$cnf_database");
 //error_log('updaterec.php');
 $rowid = $_POST['rowid'];
 $table = $_POST['table'];

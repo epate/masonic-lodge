@@ -1,7 +1,7 @@
 <?php // -*- mode: php -*-
 
 date_default_timezone_set("America/New_York");
-$sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/database.db");
+$sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/$cnf_database");
 
 echo "
 <style>

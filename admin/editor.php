@@ -2,7 +2,8 @@
 if (array_key_exists('table', $_REQUEST)) { $table = $_REQUEST['table']; }
 if (array_key_exists('rowid', $_REQUEST)) { $rowid = $_REQUEST['rowid']; }
 
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/database.db");
+include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
+$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/$cnf_database");
 $results = $sqlitedb->query("SELECT * FROM $table WHERE rowid=$rowid");
 
 $row = $results->fetchArray(SQLITE3_NUM);

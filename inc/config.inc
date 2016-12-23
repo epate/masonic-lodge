@@ -47,4 +47,6 @@ $cnf_menuLifeMembers = true;
 $cnf_menuAwards = true;
 $cnf_menuMuseum = true;
 
+// use an alternate database
+$cnf_database = "kempsville.db";
 ?>

@@ -1,6 +1,7 @@
 <?php
 date_default_timezone_set('America/New_York');
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/database.db");
+include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
+$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/$cnf_database");
 foreach ($_POST as $param_name => $param_val)
     {
         $sql = '';

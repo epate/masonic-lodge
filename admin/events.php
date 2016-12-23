@@ -1,4 +1,5 @@
 <?php
+include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
 date_default_timezone_set('America/New_York');
 
 //$start = 0; $end = 9999999999;
@@ -7,7 +8,7 @@ if ($editday) { $start = $editday; $end = $editday; }
 
 if (array_key_exists('start', $_REQUEST)) { $start = $_REQUEST['start']; }
 if (array_key_exists('end', $_REQUEST)) { $end = $_REQUEST['end']; }
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/database.db");
+$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/$cnf_database");
 
 $sql  = "SELECT rowid, StartDateTime, EndTime, Description, Location, Category FROM calendar ";
 $sql .= "WHERE strftime('%Y-%m-%d',StartDateTime)>=\"$start\" AND strftime('%Y-%m-%d',StartDateTime)<=\"$end\" ";
