@@ -5,16 +5,15 @@
   xmlns:og="http://ogp.me/ns#"
   xmlns:fb="http://www.facebook.com/2008/fbml">
  <head>
-  <title>Calendar - Kempsville Lodge No. 196</title>
   <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-  <meta property="og:url" content="http://kempsvillelodge.org/calendar/" />
-  <meta property="og:site_name" content="Kempsville Lodge No. 196" />
-  <meta property="og:title" content="Calendar of Events" />
-  <meta property="og:description" content="Calendar of events for Kempsville Masonic Lodge No. 196 as well as the appendant
- bodies hosted there." />
-  <meta property="og:image" content="http://kempsvillelodge.org/graphics/calendar.jpg" />
   <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
-<? include "../header.html"; ?>
+  <? include "../header.html"; ?>
+  <title>Calendar - <?= $cnf_lodgeNameNumber ?></title>
+  <meta property="og:url" content="http://kempsvillelodge.org/calendar/" />
+  <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
+  <meta property="og:title" content="Calendar of Events" />
+  <meta property="og:description" content="Calendar of events for <?= $cnf_lodgeNameNumber ?> as well as the appendant bodies hosted there." />
+  <meta property="og:image" content="http://kempsvillelodge.org/graphics/calendar.jpg" />
  </head>
  <body>
 

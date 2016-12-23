@@ -3,13 +3,13 @@
 <?php set_include_path(".:/usr/local/lib/php:$_SERVER[DOCUMENT_ROOT]"); ?>
 <html lang="en">
  <head>
-  <title>Mason of the Year - Kempsville Lodge No. 196</title></head>
   <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-<? include "../header.html"; ?>
+  <? include "../header.html"; ?>
+  <title>Mason of the Year - <?= $cnf_lodgeNameNumber ?></title></head>
  </head>
  <body>
 
-<h1>William Hollowell Pierce<br>"Mason of the Year" Recipients</h1>
+<h1>Mason of the Year Recipients</h1>
 <? MasonOfTheYear(); ?>
 <div class="visible-xs visible-sm">*Passed to the Celestial Lodge above</div>
 

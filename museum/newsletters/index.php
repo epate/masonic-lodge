@@ -12,15 +12,16 @@
       xmlns:og="http://ogp.me/ns#"
       xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
-    <title>Newsletter Archive - Kempsville Lodge No. 196</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
+    <? include "../../header.html"; ?>
+    <title>Newsletter Archive - <?= $cnf_lodgeNameNumber ?></title>
+
     <link rel="image_src" type="image/gif" href=/cgi-bin/deanimate" />
 
     <meta property="og:url" content="http://kempsvillelodge.org/museum/newsletters/" />
-    <meta property="og:site_name" content="Kempsville Lodge No. 196" />
-    <meta property="og:title" content="The Ashlar - <?= $date ?>" />
-    <meta property="og:description" content="The monthly newsletter of Kempsville Lodge No. 196" />
+    <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
+    <meta property="og:title" content="Newsletter - <?= $date ?>" />
+    <meta property="og:description" content="The monthly newsletter of <?= $cnf_lodgeNameNumber ?>" />
     <meta property="og:image:width" content="300" />
     <meta property="og:image:height" content="300" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -29,7 +30,7 @@
 
     <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
 
-    <? include "../../header.html"; ?>
+
   </head>
   <body>
 

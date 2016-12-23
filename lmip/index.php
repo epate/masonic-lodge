@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <?php set_include_path(".:/usr/local/lib/php:$_SERVER[DOCUMENT_ROOT]"); ?>
   <head>
-    <title>Life Members In Perpetuity - Kempsville Lodge No. 196</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
     <? include "../header.html"; ?>
+    <title>Life Members In Perpetuity - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
 
     <h1>Life Members In Perpetuity</h1>
     The Life Membership In Perpituity program continues to make payments
-    to both the Grand Lodge of Virginia and Kempsville Lodge for as long as
+    to both the Grand Lodge of Virginia and <?= $cnf_lodgeName ?> for as long as
     the Lodge holds its Charter. More information can be found at the
     Grand Lodge of Virginia 
     <a href=https://grandlodgeofvirginia.org/members/life-membership-in-perpetuity target=_blank>

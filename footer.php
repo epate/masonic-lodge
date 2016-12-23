@@ -15,7 +15,7 @@
 
 <footer>
 Page Last Updated: <?= strftime("%D %r", getlastmod()); ?><br>
-Questions or comments can be sent to <a href=mailto:<?= $cnf_webmaster ?>><?= $cnf_webmaster ?></a>
+Questions or comments can be sent to <a href=mailto:<?= $cnf_webmasterEmail ?>><?= $cnf_webmasterEmail ?></a>
 </footer>
 
 </div>

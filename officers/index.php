@@ -4,9 +4,9 @@
 
 <html lang="en">
   <head>
-    <title>Lodge Officers of Kempsville Lodge No. 196</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
     <? include "../header.html"; ?>
+    <title>Lodge Officers - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
 

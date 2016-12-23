@@ -32,9 +32,9 @@ function AwardsRecognition()
 
 <html lang="en">
   <head>
-    <title>Awards and Recognition - Kempsville Lodge No. 196</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
     <? include "../header.html"; ?>
+    <title>Awards and Recognition - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
 

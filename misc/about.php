@@ -3,16 +3,17 @@
 <?php set_include_path(".:/usr/local/lib/php:$_SERVER[DOCUMENT_ROOT]"); ?>
 <html lang="en">
   <head>
-    <title>About Freemasonry and Our Masonic Lodge</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
     <? include "../header.html"; ?>
+    <title>About Freemasonry and <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
 
-    <h1>About Freemasonry and Our Lodge</h1>
+    <h1>About Freemasonry and <?= $cnf_lodgeName ?></h1>
 
-    <h2>Our Lodge No. 0</h2>
-    Something about our lodge...
+    <h2><?= $cnf_lodgeNameNumber ?></h2>
+    
+    <?= $cnf_lodgeDescription ?>
     
     <h2>The Grand Lodge of Virginia</h2>
     <p>The Mission of the <a href="http://www.grandlodgeofvirginia.org/">Grand Lodge of Virginia</a> is to teach and perpetuate

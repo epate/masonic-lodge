@@ -4,7 +4,12 @@ $cnf_lodgeNameNumber = "Internet Lodge No. 123";
 $cnf_lodgeName = "Internet Lodge";
 $cnf_lodgeAddress = "123 Main Street";
 $cnf_lodgeCityStateZip = "Masonville, VA 12345";
-$cnf_webmaster = "webmaster@internetlodge123.org";
+$cnf_statedMeetings = "2<sup>nd</sup> Tuesday at 7:00PM, Dinner at 6:00PM";
+$cnf_workMeetings = "7:00PM";
+
+$cnf_webmasterName = "John Doe";
+$cnf_webmasterEmail = "webmaster@internetlodge123.org";
+
 $cnf_mainColor = "orange";
 $cnf_mainColorDark = "darkorange";
 

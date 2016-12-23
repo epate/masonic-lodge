@@ -39,9 +39,9 @@ function MemorialList()
 ?>
 <html lang="en">
   <head>
-    <title>Memorial - Kempsville Lodge No. 196</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
     <? include "../header.html"; ?>
+    <title>Memorial - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
 
