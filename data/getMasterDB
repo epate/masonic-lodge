@@ -1,3 +1,0 @@
-#!/bin/bash
-
-rsync -av -e ssh epate@epate.com:/home/epate/www/kempsvillelodge.org/data/kempsville.db .
