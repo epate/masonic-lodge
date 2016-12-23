@@ -46,26 +46,9 @@
 	</table>
 	<? EndImage(); ?>
 
-	<h2>Worshipful Master's Coin</h2>
-	<? ImageResponsive("/museum/coins/20161220-01.jpg"); ?><? EndImage(); ?>
-	<? ImageResponsive("/museum/coins/20161220-02.jpg"); ?><? EndImage(); ?>
-
-	<h2>Lake Harriet Lodge Presentation</h2>
-	<? ImageResponsive('/photos/2017-LakeHarriet.jpg'); ?>
-	<span class="courtesyof">Photo courtesy of Worshipful Greg Muir</span><br/>
-	Worshipful Brother Peter Nickitas presenting a Kempsville
-	Lodge 2017 coin to Worshipful Brother Andrew Arashiba, the
-	sitting Master of Lake Harriet Lodge No. 277, Minneapolis,
-	Minnesota.
-	<? EndImage(); ?>
-	
 	<? LodgeOfSorrow("2017"); ?>
 	
-	<h2>Roster Cover</h2>
-	<? ImageResponsive('/photos/2017-RosterCover.jpg'); ?><? EndImage(); ?>
-
 	<? Newsletters("2017"); ?>
-
       </div>
     </div>
     <? include "footer.php"; ?>
