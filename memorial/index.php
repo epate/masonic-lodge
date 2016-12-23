@@ -40,7 +40,7 @@ function MemorialList()
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Memorial - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -48,7 +48,7 @@ function MemorialList()
     <h1>Brethren Who Have Passed to the Celestial Lodge Above</h1>
     <? MemorialList(); ?>
 
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
   </body>
 </html>

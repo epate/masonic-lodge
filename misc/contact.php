@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Contact Us - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -31,9 +31,9 @@
 
     <h2><span class="glyphicon glyphicon-time"></span> Schedule</h2>
     Stated Meetings: <?= $cnf_statedMeetings ?><br>
-    Work Nights: 7:00PM<br>
+    Work Nights: <?= $cnf_workMeetings ?><br>
     Complete Schedule can be found on the <a href="/calendar/">Lodge Calendar</a>
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
   </body>
 </html>

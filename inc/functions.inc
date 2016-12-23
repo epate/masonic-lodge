@@ -579,7 +579,7 @@ function loadOfficers()
 
 function GetTopMenu($m)
 {
-    $items = file("http://kempsvillelodge.org/$m", FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
+    $items = file("$_SERVER[DOCUMENT_ROOT]/inc/$m", FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
     foreach ($items as $item)
         {
             $item = preg_replace("/ class=\".*\"/", '', $item);

@@ -14,7 +14,7 @@
     <meta property="og:image" content="http://kempsvillelodge.org/photos/1955-Officers.jpg" />
     <meta property="og:description" content="Take a virtual stroll down memory lane and enjoy hundreds of old photos, newsletters, lodge memorabilia, and more." />
     <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
   </head>
   <body>
     
@@ -198,6 +198,6 @@
 
       </div>
     </div>
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
   </body>
 </html>

@@ -7,7 +7,7 @@
  <head>
   <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
   <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
-  <? include "../header.html"; ?>
+  <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
   <title>Calendar - <?= $cnf_lodgeNameNumber ?></title>
   <meta property="og:url" content="http://kempsvillelodge.org/calendar/" />
   <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
@@ -40,7 +40,7 @@
 </div>
 
 <p><a href=list.php>List View</a>&nbsp;|&nbsp;<a href=ical.php>Subscribe</a></p>
-<? include "../footer.php"; ?>
+<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
 <script type="text/javascript" src="/js/fullcalendar-2.6.1/lib/moment.min.js"></script>
 <script type="text/javascript" src="/js/fullcalendar-2.6.1/fullcalendar.min.js"></script>

@@ -1,5 +1,5 @@
 <!-- -*- mode: html; -*- -->
-<?php include "../phplib/config.inc"; ?>
+<?php include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc"; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

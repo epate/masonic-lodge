@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>History - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -13,7 +13,7 @@
 
     Our lodge history goes here...
     
-      <? include "../footer.php"; ?>
+      <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
   </body>
 </html>

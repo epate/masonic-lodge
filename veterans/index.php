@@ -32,7 +32,7 @@ function VeteransList($y)
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Masonic Veterans - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -48,7 +48,7 @@ function VeteransList($y)
     <h1>50 Year Masonic Veterans</h1>
     <? VeteransList(50); ?>
 
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
   </body>
 </html>
 

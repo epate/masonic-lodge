@@ -6,7 +6,7 @@
       xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Past Masters - <?= $cnf_lodgeNameNumber ?></title>
     <meta property="og:url" content="http://kempsvillelodge.org/years/" />
     <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
@@ -95,7 +95,7 @@ function GetPastMasters($table, $ylink)
 }
 ?>
 
-<? include "footer.php"; ?>
+<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
 <script src="/js/jquery.bxslider/jquery.bxslider.js"></script>
 <link href="/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />

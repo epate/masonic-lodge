@@ -2,8 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <? set_include_path(".:/usr/local/lib/php"); ?>
 <?
-include "phplib/config.inc";
-include "phplib/functions.inc";
+include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
+include "$_SERVER[DOCUMENT_ROOT]/inc/functions.inc";
 $usefbfeed = true;
 $year = 2017;
 ?>
@@ -163,7 +163,7 @@ $year = 2017;
 	
 	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 	  <div class="list-group">
-	    <? include "menu.inc"; ?>
+	    <? include "$_SERVER[DOCUMENT_ROOT]/inc/menu.inc"; ?>
 	  </div>
 	  <div id="topbuttondiv" data-spy="affix">
 	    <button id="topbutton" type="button" class="pull-right btn btn-primary btn-md">Top

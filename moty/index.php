@@ -4,7 +4,7 @@
 <html lang="en">
  <head>
   <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-  <? include "../header.html"; ?>
+  <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
   <title>Mason of the Year - <?= $cnf_lodgeNameNumber ?></title></head>
  </head>
  <body>
@@ -13,7 +13,7 @@
 <? MasonOfTheYear(); ?>
 <div class="visible-xs visible-sm">*Passed to the Celestial Lodge above</div>
 
-<? include "footer.php"; ?>
+<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
 </body>
 </html>

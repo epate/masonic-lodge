@@ -13,7 +13,7 @@
       xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "../../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Newsletter Archive - <?= $cnf_lodgeNameNumber ?></title>
 
     <link rel="image_src" type="image/gif" href=/cgi-bin/deanimate" />
@@ -49,6 +49,6 @@
     <h1>Newsletter Archive</h1>
     <? Newsletters(); ?>
 
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
   </body>
 </html>

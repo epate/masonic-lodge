@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Lodge Officers - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -117,7 +117,7 @@
       </div>
     </div>
 
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
   </body>
 </html>

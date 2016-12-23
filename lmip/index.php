@@ -3,7 +3,7 @@
 <?php set_include_path(".:/usr/local/lib/php:$_SERVER[DOCUMENT_ROOT]"); ?>
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "../header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Life Members In Perpetuity - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -20,7 +20,7 @@
 
     <div class="visible-xs visible-sm">*Passed to the Celestial Lodge above</div>
 
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 
   </body>
 </html>
