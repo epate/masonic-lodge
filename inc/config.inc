@@ -10,6 +10,8 @@ $cnf_workMeetings = "7:30PM";
 $cnf_webmasterName = "John Doe";
 $cnf_webmasterEmail = "webmaster@internetlodge123.org";
 
+$cnf_headerGraphicLeft = "jachin.png";
+$cnf_headerGraphicRight = "boaz.png";
 $cnf_mainColor = "orange";
 $cnf_mainColorDark = "darkorange";
 
