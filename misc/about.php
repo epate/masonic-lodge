@@ -3,21 +3,16 @@
 <?php set_include_path(".:/usr/local/lib/php:$_SERVER[DOCUMENT_ROOT]"); ?>
 <html lang="en">
   <head>
-    <title>About Freemasonry and Kempsville Masonic Lodge</title>
+    <title>About Freemasonry and Our Masonic Lodge</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
     <? include "../header.html"; ?>
   </head>
   <body>
 
-    <h1>About Freemasonry and Kempsville Lodge</h1>
+    <h1>About Freemasonry and Our Lodge</h1>
 
-    <h2>Kempsville Lodge No. 196</h2>
-    Chartered in 1955, Kempsville Lodge No. 196, A.F. & A.M. is one of the largest and most active
-    Masonic Lodges in Virginia. In addition to the Masonic Lodge, we're the home of the
-    Kempsville Chapter of the Order of the Eastern Star,
-    Bethel 42 International Order of Job&#39;s Daughters, and the
-    Kempsville Chapter of the Order of DeMolay. We have
-    a long and rich <a href="/history/">history</a> as an active and vibrant Lodge.
+    <h2>Our Lodge No. 0</h2>
+    Something about our lodge...
     
     <h2>The Grand Lodge of Virginia</h2>
     <p>The Mission of the <a href="http://www.grandlodgeofvirginia.org/">Grand Lodge of Virginia</a> is to teach and perpetuate
