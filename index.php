@@ -116,13 +116,14 @@ $year = 2017;
 		</div><br>
 	      </div>
 
-	      <p><a href="https://www.facebook.com/kempsvillelodge" target="_blank" class="btn btn-primary btn-lg btn-block">Find us on Facebook</a></p>
+<? if ($cnf_facebook) { ?>
+	      <p><a href="<?= $cnf_facebookPage ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Find us on Facebook</a></p>
 	      <!-- Facebook Panel on Home Page Only -->
 	      <div id="fb-root"></div>
 	      <? if ($usefbfeed) { ?>
 	      <?php fbFeed($settings); ?><br/>
 	      <? } else { ?>
-	      <div style="height:400px" class="fb-like-box" data-href="https://www.facebook.com/kempsvillelodge" xdata-height="400" xdata-width="350" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-force-wall="false"></div>
+	      <div style="height:400px" class="fb-like-box" data-href="<?= $cnf_facebookPage ?>" xdata-height="400" xdata-width="350" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-force-wall="false"></div>
 	      
 	      <script>
 		(function(d, s, id) {
@@ -134,6 +135,7 @@ $year = 2017;
 		}(document, 'script', 'facebook-jssdk'));
 	      </script>
 	      <? } ?>
+<? } ?>
 	      <p><a href="/museum/newsletters/index.php?r=<?= time(); ?>" class="btn btn-primary btn-lg btn-block">Our Newsletter</a></p>
 	      <? RecentAshlarsSlider(); ?>
 

@@ -28,6 +28,10 @@ pellentesque iaculis ac vel odio. Vivamus sit amet fringilla quam, in
 egestas nulla.
 ";
 
+// show Facebook page
+$cnf_facebook = true;
+$cnf_facebookPage = "https://www.facebook.com/GrandLodgeVirginia/";
+
 // menu items to show
 $cnf_menuCalendar = true;
 $cnf_menuOfficers = true;
