@@ -1,4 +1,5 @@
 <!-- -*- mode: html; -*- -->
+<?php include "../phplib/config.inc"; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +11,7 @@
     <meta name="author" content="Emmett M. Pate, Jr.">
     <link href="/graphics/favicon.ico" rel="shortcut icon"></link>
 
-    <title>Kempsville Masonic Lodge - Admin</title>
+    <title><?= $cnf_lodgeNameNumber ?> - Admin</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
