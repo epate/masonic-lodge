@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Kempsville Masonic Lodge - Admin">
-    <meta name="author" content="Emmett M. Pate, Jr.">
+    <meta name="description" content="<?= $cnf_lodgeNameNumber ?> - Admin">
     <link href="/graphics/favicon.ico" rel="shortcut icon"></link>
 
     <title><?= $cnf_lodgeNameNumber ?> - Admin</title>

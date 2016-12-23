@@ -9,16 +9,15 @@
   <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
   <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
   <title>Calendar - <?= $cnf_lodgeNameNumber ?></title>
-  <meta property="og:url" content="http://kempsvillelodge.org/calendar/" />
+  <meta property="og:url" content="http://<?= $_SERVER[SERVER_NAME] ?>/calendar/" />
   <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
   <meta property="og:title" content="Calendar of Events" />
   <meta property="og:description" content="Calendar of events for <?= $cnf_lodgeNameNumber ?> as well as the appendant bodies hosted there." />
-  <meta property="og:image" content="http://kempsvillelodge.org/graphics/calendar.jpg" />
  </head>
  <body>
 
-<h1>Calendar of Events</h1>
-
+ <h1>Calendar of Events</h1>
+   
 <div class="row">
   <div class="col-md-12 hidden-sm hidden-xs">
     <!-- <span class=comingup>Work Night</span>, -->

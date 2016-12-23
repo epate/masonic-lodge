@@ -6,15 +6,13 @@
       xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
-
-    <meta property="og:url" content="http://kempsvillelodge.org/museum/" />
-    <meta property="og:site_name" content="Kempsville Lodge No. 196" />
-    <meta property="og:title" content="Kempsville Lodge Virtual Museum" />
-    <meta property="og:image" content="http://kempsvillelodge.org/photos/1955-Officers.jpg" />
-    <meta property="og:description" content="Take a virtual stroll down memory lane and enjoy hundreds of old photos, newsletters, lodge memorabilia, and more." />
     <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
     <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Virtual Museum - <?= $cnf_lodgeNameNumber ?></title>
+    <meta property="og:url" content="http://<?= $_SERVER[SERVER_NAME] ?>/museum/" />
+    <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
+    <meta property="og:title" content="<?= $cnf_lodgeName ?> Virtual Museum" />
+    <meta property="og:description" content="Take a virtual stroll down memory lane and enjoy hundreds of old photos, newsletters, lodge memorabilia, and more." />
   </head>
   <body>
     

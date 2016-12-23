@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
     <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
     <title>Past Masters - <?= $cnf_lodgeNameNumber ?></title>
-    <meta property="og:url" content="http://kempsvillelodge.org/years/" />
+    <meta property="og:url" content="http://<?= $_SERVER[SERVER_NAME] ?>/years/" />
     <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
     <meta property="og:title" content="Past Masters Gallery" />
-    <meta property="og:image" content="http://kempsvillelodge.org/photos/large/1955-Pierce.jpg" />
+    <meta property="og:image" content="http://<?= $_SERVER[SERVER_NAME] ?>/photos/large/1955-Pierce.jpg" />
     <meta property="og:description" content="The Past Masters of <?= $cnf_lodgeNameNumber ?>" />
   </head>
   <body>

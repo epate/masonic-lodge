@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<? include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc"; ?>
 <head>
-    <title>Kempsville Lodge - Data Sources</title>
+    <title><?= $cnf_lodgeNameNumber ?> - Data Sources</title>
 </head>
 
-<h1>Data Sources</h1>
+<h1><?= $cnf_lodgeName ?> - Data Sources</h1>
 <ul>
 <li><a href="#officers">Lodge Officers</a></li>
 <li><a href="#majorevents">Major Events</a></li>
