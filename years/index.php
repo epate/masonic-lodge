@@ -43,7 +43,8 @@ function PMCarousel($table)
     echo "<div class=\"pmslider\">\n";
     while ($row = $results->fetchArray(SQLITE3_ASSOC))
     {
-      echo "<div><img src=\"/photos/$row[Photo]\" class=\"pm-img\" width=109 height=150 title=\"$row[Year]\" /></div>\n";
+      if (file_exists("$_SERVER[DOCUMENT_ROOT]/photos/$row[Photo]")) { echo "<div><img src=\"/photos/$row[Photo]\" class=\"pm-img\" width=109 height=150 title=\"$row[Year]\" /></div>\n"; }
+      else  { echo "<div><img src=\"/photos/PastMaster.png\" class=\"pm-img\" width=109 height=150 title=\"$row[Year]\" /></div>\n"; }
     }
   echo "</div>\n";
 }
@@ -78,8 +79,15 @@ function GetPastMasters($table, $ylink)
             echo "  <div class=\"col-xs-12 col-sm-10 col-md-10 col-lg-10\">\n";
             echo "    <div style=\"width:100%\">\n";
             echo "      <div style=\"float:left;width:130px;\">\n";
-            echo "	<a href=\"/photos/large/$row[Photo]\" class=\"thickbox\" title=\"$row[Name]\">\n";
-            echo "	  <img src=\"/photos/$row[Photo]\" class=\"img-thumbnail\" /></a>\n";
+	    if (file_exists("$_SERVER[DOCUMENT_ROOT]/photos/$row[Photo]"))
+	      {
+		echo "	<a href=\"/photos/large/$row[Photo]\" class=\"thickbox\" title=\"$row[Name]\">\n";
+		echo "	  <img src=\"/photos/$row[Photo]\" class=\"img-thumbnail\" /></a>\n";
+	      }
+	    else
+	      {
+		echo "	  <img src=\"/photos/PastMaster.png\" class=\"img-thumbnail\" /></a>\n";
+	      }
             echo "      </div>\n";
             echo "      <div style=\"margin-left:130px;\">\n";
             echo "	<h2>$row[Name]</h2>\n";
