@@ -71,9 +71,9 @@ function GetPastMasters($table, $ylink)
             echo "<div class=\"row\">\n";
             echo "  <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n";
             echo "    <h2>";
-            if ($ylink) { echo "<a href=\"$row[Year].php\" id=\"$row[Year]\" />"; }
+	    if ($ylink && file_exists($row[Year] . ".php")) { echo "<a href=\"$row[Year].php\" id=\"$row[Year]\" />"; }
             echo "$row[Year]";
-            if ($ylink) { echo "</a>"; }
+            if ($ylink && file_exists($row[Year] . ".php")) { echo "</a>"; }
             echo "</h2>\n";
             echo "  </div>\n";
             echo "  <div class=\"col-xs-12 col-sm-10 col-md-10 col-lg-10\">\n";
