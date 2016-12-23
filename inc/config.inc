@@ -43,5 +43,6 @@ $cnf_menuMemoriam = true;
 $cnf_menuMasonOfTheYear = true;
 $cnf_menuLifeMembers = true;
 $cnf_menuAwards = true;
+$cnf_menuMuseum = true;
 
 ?>

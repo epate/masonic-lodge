@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('America/New_York');
-
+include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
 $sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . '/data/database.db');
 
 $start = 0; $end = 9999999999;
@@ -54,7 +54,7 @@ while ($row = $results->fetchArray(SQLITE3_ASSOC))
     $EndTime = $row[EndTime];
     $Location = $row[Location];
 
-    if (! $Location) { $Location = "Kempsville Lodge No. 196"; }
+    if (! $Location) { $Location = "$cnf_lodgeNameNumber"; }
     $EndDateAndTime = substr($StartDateAndTime,0,10).$EndTime;
     
     if ((strtotime($StartDateAndTime) >= $start) && (strtotime($StartDateAndTime) <= $end))

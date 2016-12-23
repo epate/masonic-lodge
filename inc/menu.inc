@@ -8,3 +8,4 @@
 <? if ($cnf_menuMasonOfTheYear) { ?><a href="/moty/" class="list-group-item">Mason of the Year</a><? } ?>
 <? if ($cnf_menuLifeMembers) { ?><a href="/lmip/" class="list-group-item">Life Members in Perpetuity</a><? } ?>
 <? if ($cnf_menuAwards) { ?><a href="/awards/" class="list-group-item">Awards and Recognition</a><? } ?>
+<? if ($cnf_menuMuseum) { ?><a href="/museum/" class="list-group-item">Virtual Museum</a><? } ?>

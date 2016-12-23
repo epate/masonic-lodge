@@ -3,9 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html lang="en">
   <head>
-    <title>Kempsville Lodge No. 196 - 2017</title>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-    <? include "header.html"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <title><?= $cnf_lodgeNameNumber ?> - 2017</title>
   </head>
 
   <body>
@@ -23,23 +23,22 @@
 	  <tr>
 	    <td>
 	      <ol>
-		<li>Ray Baez - Tiler</li>
-		<li>Bill Nelligar - Treasurer</li>
-		<li>John Settle, III - Junior Deacon</li>
-		<li>Chris Anders - Senior Warden</li>
-		<li>Dickie Cooper - Marshal</li>
-		<li>Dave Trzeciakiewicz - Senior Deacon</li>
+		<li>John Doe - Tiler</li>
+		<li>John Doe - Treasurer</li>
+		<li>John Doe - Junior Deacon</li>
+		<li>John Doe - Senior Warden</li>
+		<li>John Doe - Marshal</li>
+		<li>John Doe - Senior Deacon</li>
 	      </ol>
 	    </td>
 	    <td>
 	      <ol start=7>
-		<li>Greg Muir - Worshipful Master</li>
-		<li>Mike Denning - Chaplain</li>
-		<li>Scott Foxwell - Musician</li>
-		<li>Roger Taylor - Junior Warden</li>
-		<li>Dennis Eaton - Senior Steward</li>
-		<li>Bob Stanek - Secretary</li>
-		<li>Todd Moissett - Junior Steward (not shown)</li>
+		<li>John Doe - Worshipful Master</li>
+		<li>John Doe - Chaplain</li>
+		<li>John Doe - Musician</li>
+		<li>John Doe - Junior Warden</li>
+		<li>John Doe - Senior Steward</li>
+		<li>John Doe - Secretary</li>
 	      </ol>
 	    </td>
 	  </tr>
@@ -51,6 +50,6 @@
 	<? Newsletters("2017"); ?>
       </div>
     </div>
-    <? include "footer.php"; ?>
+    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
   </body>
 </html>
