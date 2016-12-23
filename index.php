@@ -2,18 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <? set_include_path(".:/usr/local/lib/php"); ?>
 <?
+include "phplib/config.inc";
 include "phplib/functions.inc";
 $usefbfeed = true;
 $year = 2017;
 ?>
 <html lang="en" ng-app="Lodge">
   <head>
-    <title>Our Masonic Lodge</title>
+    <title><?= $cnf_lodgeNameNumber ?></title>
     <meta charset="utf-8"></meta>
     <meta HTTP-EQUIV="Refresh" CONTENT="<?= strtotime('tomorrow + 30 minutes')-time(); ?>"></meta>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-    <meta name="description" content="Our Masonic Lodge"></meta>
+    <meta name="description" content="<?= $cnf_lodgeNameNumber ?>"></meta>
     <meta name="author" content=""></meta>
     <link href="/graphics/favicon.ico" rel="shortcut icon"></link>
     <?
@@ -79,7 +80,7 @@ $year = 2017;
         <div class="col-xs-12 col-sm-9">
 
           <div class="jumbotron" id="jumbotrondiv">
-	    <h1 align=center class="visible-xs">Our&nbsp;Lodge No.&nbsp;0</h1>
+	    <h1 align=center class="visible-xs"><?= $cnf_lodgeNameNumber ?></h1>
 
 	    <div style="float:left;padding-right:10px;">
 	      <img src="/graphics/jachin.png" alt="Jachin" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
@@ -89,7 +90,7 @@ $year = 2017;
 	      <img src="/graphics/boaz.png" alt="Jachin" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
 	      <img src="/graphics/boaz.png" alt="Jachin" width=40 height=79 class="img-responsive visible-xs" />
             </div>
-	    <h1 align=center class="visible-sm visible-md visible-lg">Our&nbsp;Lodge No.&nbsp;0</h1>
+	    <h1 align=center class="visible-sm visible-md visible-lg"><?= $cnf_lodgeNameNumber ?></h1>
 	    <p align=center style="color:white">
 	      <small>
 		Our lodge description...
@@ -100,7 +101,7 @@ $year = 2017;
 
           <div class="row">
 	    <div class="col-md-6">
-	      <p><a href="/calendar/" class="btn btn-primary btn-lg btn-block">This Week at Our Lodge</a>
+	      <p><a href="/calendar/" class="btn btn-primary btn-lg btn-block">This Week at <?= $cnf_lodgeName ?></a>
 		<table border=0 width=100%>
 		  <? ThisWeek(7); ?>
 		</table>
@@ -172,7 +173,7 @@ $year = 2017;
 
       <footer>
 	Page Last Updated: <?= strftime("%D %r", getlastmod_multi("index.php")); ?><br/>
-	Questions or comments can be sent to <a href=mailto:webmaster@masoniclodge.org>webmaster@masoniclodge.org</a>
+	Questions or comments can be sent to <a href=mailto:<?= $cnf_webmaster ?>><?= $cnf_webmaster ?></a>
       </footer>
       
     </div>
