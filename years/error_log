@@ -1,7 +1,0 @@
-[26-Feb-2016 11:50:01 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/years/index-sql.php on line 45
-[26-Feb-2016 11:50:24 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/years/index-sql.php on line 45
-[26-Feb-2016 11:50:41 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/years/index-sql.php on line 45
-[26-Feb-2016 11:50:45 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/years/index-sql.php on line 45
-[26-Feb-2016 11:51:45 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/years/index-sql.php on line 45
-[26-Feb-2016 11:52:36 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/years/index-sql.php on line 47
-[26-Feb-2016 15:21:30 America/New_York] PHP Fatal error:  Call to a member function fetchArray() on a non-object in /home/epate/public_html/kempsvillelodge.org/phplib/functions.inc on line 515
