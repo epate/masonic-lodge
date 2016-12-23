@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('America/New_York');
 
-$sqlitedb = new SQLite3('/home/epate/public_html/kempsvillelodge.org/data/kempsville.db');
+$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . '/data/database.db');
 
 $start = 0; $end = 9999999999;
 if (array_key_exists('start', $_REQUEST)) { $start = $_REQUEST['start']; }

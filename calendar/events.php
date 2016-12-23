@@ -5,7 +5,7 @@ $start = 0; $end = 9999999999;
 if (array_key_exists('start', $_REQUEST)) { $start = $_REQUEST['start']; }
 if (array_key_exists('end', $_REQUEST)) { $end = $_REQUEST['end']; }
 
-$sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/kempsville.db");
+$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . '/data/database.db');
 
 $sql  = "SELECT StartDateTime, EndTime, Description, Location, Category FROM calendar ";
 $sql .= "WHERE StartDateTime>strftime(\"$start\") AND StartDateTime<=strftime(\"$end\") UNION ALL ";
