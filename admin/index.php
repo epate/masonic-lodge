@@ -46,7 +46,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/admin/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-          <a class="navbar-brand" href="/admin/">Website Admin</a>
+          <a class="navbar-brand" href="/admin/">Website Admin - <?= $cnf_lodgeNameNumber ?></a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
