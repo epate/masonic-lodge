@@ -25,7 +25,19 @@ h1 {
     background-color: var(--main-color-dark);
     border-color: var(--main-color-dark);
 }
+.btn-primary:focus {
+    background-color: var(--main-color-dark);
+    border-color: var(--main-color-dark);
+}
 .btn-primary:active:focus {
+    background-color: var(--main-color-dark);
+    border-color: var(--main-color-dark);
+}
+.btn-primary:active {
+    background-color: var(--main-color-dark);
+    border-color: var(--main-color-dark);
+}
+.btn-primary:active:hover {
     background-color: var(--main-color-dark);
     border-color: var(--main-color-dark);
 }
