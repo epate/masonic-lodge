@@ -87,6 +87,7 @@ function GetBiography($Year)
                 "</div></div>";
         }
 
+    echo "<h2>$row[Name]</h2>";
     echo "<table border=0 width=100%>\n";
     echo " <tr>\n";
     echo "  <td valign=top width=130>";
@@ -305,7 +306,7 @@ function RecentAshlarsSlider()
             $issue = str_replace(".pdf", "", $file);
             $title = urlencode($date);
 
-            echo "   <li><a href=/museum/newsletters/${file} target=\"_blank\"><img src=/cgi-bin/deanimate/${issue}.gif title=\"$date\" /></a>\n";
+            echo "   <li><a href=/museum/newsletters/${file} target=\"_blank\"><img src=/deanimate/${issue}.gif title=\"$date\" /></a>\n";
             if (++$count >= 12) { break; }
         }
 

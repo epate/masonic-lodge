@@ -1,2 +1,3 @@
 RewriteEngine   On
-RewriteRule     /deanimate/(.*)$        /cgi-bin/deanimate.php?p=$1 [L]
+RewriteRule     "^deanimate/(.*)$"	"/cgi-bin/deanimate.php?p=$1" [L]
+RewriteRule     "^years/(\d\d\d\d)$"		"/cgi-bin/year.php?y=$1"
