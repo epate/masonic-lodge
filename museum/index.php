@@ -62,9 +62,17 @@
       echo "<ul>\n";
       while ($row = $results->fetchArray(SQLITE3_ASSOC))
         {
-	  if ($ylink && file_exists($_SERVER[DOCUMENT_ROOT] . "/years/" . $row[Year] . ".php")) { echo "<a href=\"/years/$row[Year].php\" id=\"$row[Year]\" />"; }
+	  if ($ylink && file_exists($_SERVER[DOCUMENT_ROOT] . "/years/" . $row[Year] . ".php"))
+	    {
+	      echo "<a href=\"/years/$row[Year].php\" />";
+	      $anchor = true;
+	    }
+	  else
+	    {
+	      echo "<a href=\"/years/$row[Year]\" />";
+	    }
 	  echo "<li>$row[Year]: $row[Name]</li>";
-	  if ($ylink && file_exists($_SERVER[DOCUMENT_ROOT] . "/years/" . $row[Year] . ".php")) { echo "</a>"; }
+	  if ($anchor) { echo "</a>"; }
         }
       echo "</ul>\n";
     }
