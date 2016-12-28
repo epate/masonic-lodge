@@ -534,11 +534,16 @@ function MajorEvents($year="", $anchor=false)
 
 function LodgeOfSorrow($Year)
 {
-    global $sqlitedb;
+    global $sqlitedb, $cnf_annualStated;
 
-    $start = strtotime("second tuesday", mktime(0, 0, 0, 12, 1, $Year-1));
-    $end = strtotime("second tuesday", mktime(0, 0, 0, 12, 1, $Year));
-    $sql = "SELECT Date, Name, Titles FROM memorial WHERE Date>strftime(\"%Y%m%d\", datetime($start, 'unixepoch')) AND Date<=strftime(\"%Y%m%d\", datetime($end, 'unixepoch')) ORDER BY Date";
+    //$start = strtotime("second tuesday", mktime(0, 0, 0, 12, 1, $Year-1));
+    //$end = strtotime("second tuesday", mktime(0, 0, 0, 12, 1, $Year));
+    $start = strtotime("$cnf_annualStated" . intval($Year-1));
+    $end = strtotime("$cnf_annualStated" . intval($Year));
+      
+    // $sql = "SELECT Date, Name, Titles FROM memorial WHERE Date>strftime(\"%Y-%m-%d\", datetime($start, 'unixepoch')) AND Date<=strftime(\"%Y-%m-%d\", datetime($end, 'unixepoch')) ORDER BY Date";
+    $sql = "SELECT Date, Name, Titles FROM memorial WHERE Date>'" . date('Y-m-d', $start) . "' AND Date<='" . date('Y-m-d', $end) . "' ORDER BY Date";
+    
     $results = $sqlitedb->query($sql);
 
     $GotOne = false;
