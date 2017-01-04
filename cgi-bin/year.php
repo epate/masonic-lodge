@@ -12,6 +12,9 @@
 <?php
    echo "<h1>" . $_GET['y'] . "</h1>";
 GetBiography($_GET['y']);
+
+GetTimeline($_GET['y']);
+
 LodgeOfSorrow($_GET['y']);
 Newsletters($_GET['y']);
 ?>
@@ -21,3 +24,31 @@ Newsletters($_GET['y']);
 <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
 </body>
 </html>
+
+<?
+function GetTimeline($Year)
+{
+  global $sqlitedb;
+
+  $sql  = "SELECT title, photo, caption, credit FROM years ";
+  $sql .= "WHERE year='$Year' ORDER BY placement ASC";
+  $results = $sqlitedb->query($sql);
+
+  while ($row = $results->fetchArray(SQLITE3_ASSOC))
+    {
+      $hasImage = false;
+      
+      echo "<h2>" . $row['Title'] . "</h2>";
+      if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/photos/" . $row['Photo']))
+	{
+	  ImageResponsive('/photos/' . $row['Photo']);
+	  if ($row['Credit']) {
+	      echo "<span class=\"courtesyof\">Photo courtesy of " . $row['Credit'] . "</span><br/>";
+	    }
+	  $hasImage = true;
+	}
+      echo $row['Caption'];
+      if ($hasImage) { EndImage(); }
+    }
+}
+?>

@@ -91,6 +91,7 @@
 	    <li><a href="?module=miscellaneous&table=moty&action=view&sort=Year">Mason of the Year</a></li>
 	    <li><a href="?module=miscellaneous&table=veterans&action=view&sort=Years,LastName">Masonic Veterans</a></li>
 	    <li><a href="?module=miscellaneous&table=awards&action=view&sort=Year">Lodge Awards</a></li>
+	    <li><a href="?module=yearly">Yearly Pages</a></li>
 	  </ul>
 
 	  <h4>Utilities</h4>

@@ -22,16 +22,21 @@ function Module()
                switch($_GET['module'])
                    {
                    case "calendar":
-                       DumpCalendarTable();
+		     DumpCalendarTable();
                    break;
                    
                    case "roster":
-                       DumpPastMastersTable($_GET['table']);
+		     DumpPastMastersTable($_GET['table']);
                    break;
                    
                    case "miscellaneous":
-                       DumpTable($_GET['table'], $_GET['sort']);
+		     DumpTable($_GET['table'], $_GET['sort']);
                    break;
+
+                   case "yearly":
+		     DumpTable("years", "year,placement");
+                   break;
+	       
                    }
            }
        else
