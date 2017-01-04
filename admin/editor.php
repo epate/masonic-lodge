@@ -19,14 +19,14 @@ for ($i=0; $i<$results->numColumns(); $i++)
     {
         $colName = $results->columnName($i);
         $colLength = strlen($row[$i]);
-        if ($colLength < 75) {
-            echo "<input type=\"text\" class=\"form-control\" name=\"$colName\" placeholder=\"$colName\" value=\"$row[$i]\">\n";
-        }
-        else {
+	if ($colName == 'Biography') {
             $lines = substr_count($row[$i], "\n") + 3;
             echo "<textarea type=\"text\" rows=\"$lines\" class=\"form-control\" name=\"$colName\" placeholder=\"$colName\" value=\"$row[$i]\">";
             echo $row[$i];
             echo "</textarea>";
+        }
+        else {
+            echo "<input type=\"text\" class=\"form-control\" name=\"$colName\" placeholder=\"$colName\" value=\"$row[$i]\">\n";
         }
 
     }
