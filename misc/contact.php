@@ -3,8 +3,8 @@
 <?php set_include_path(".:/usr/local/lib/php:$_SERVER[DOCUMENT_ROOT]"); ?>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+    <? include __DIR__ . "/../inc/header.html"; ?>
     <title>Contact Us - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -33,7 +33,7 @@
     Stated Meetings: <?= $cnf_statedMeetings ?><br>
     Work Nights: <?= $cnf_workMeetings ?><br>
     Complete Schedule can be found on the <a href="/calendar/">Lodge Calendar</a>
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+    <? include __DIR__ . "/../inc/footer.php"; ?>
 
   </body>
 </html>

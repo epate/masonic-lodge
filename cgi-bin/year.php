@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-<? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+<? include __DIR__ . "/../inc/header.html"; ?>
 <title><?= $cnf_lodgeNameNumber ?> - 2017</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ Newsletters($_GET['y']);
 
 </div>
 </div>
-<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+<? include __DIR__ . "/../inc/footer.php"; ?>
 </body>
 </html>
 
@@ -39,9 +39,9 @@ function GetTimeline($Year)
       $hasImage = false;
       
       echo "<h2>" . $row['Title'] . "</h2>";
-      if (file_exists($_SERVER['DOCUMENT_ROOT'] . "/photos/" . $row['Photo']))
+      if (file_exists(__DIR__ . "/../photos/" . $row['Photo']))
 	{
-	  ImageResponsive('/photos/' . $row['Photo']);
+	  ImageResponsive('../photos/' . $row['Photo']);
 	  if ($row['Credit']) {
 	      echo "<span class=\"courtesyof\">Photo courtesy of " . $row['Credit'] . "</span><br/>";
 	    }

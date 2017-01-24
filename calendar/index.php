@@ -7,9 +7,9 @@
  <head>
   <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
   <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
-  <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+  <? include __DIR__ . "/../inc/header.html"; ?>
   <title>Calendar - <?= $cnf_lodgeNameNumber ?></title>
-  <meta property="og:url" content="http://<?= $_SERVER[SERVER_NAME] ?>/calendar/" />
+  <meta property="og:url" content="http://<?= $_SERVER['SERVER_NAME'] ?>/calendar/" />
   <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
   <meta property="og:title" content="Calendar of Events" />
   <meta property="og:description" content="Calendar of events for <?= $cnf_lodgeNameNumber ?> as well as the appendant bodies hosted there." />
@@ -39,12 +39,12 @@
 </div>
 
 <p><a href=list.php>List View</a>&nbsp;|&nbsp;<a href=ical.php>Subscribe</a></p>
-<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+<? include __DIR__ . "/../inc/footer.php"; ?>
 
-<script type="text/javascript" src="/js/fullcalendar-2.6.1/lib/moment.min.js"></script>
-<script type="text/javascript" src="/js/fullcalendar-2.6.1/fullcalendar.min.js"></script>
-<link type="text/css" href="/js/fullcalendar-2.6.1/fullcalendar.css" rel="stylesheet" />
-<link type="text/css" href="/calendar/calendar.css" rel="stylesheet" />
+<script type="text/javascript" src="../js/fullcalendar-2.6.1/lib/moment.min.js"></script>
+<script type="text/javascript" src="../js/fullcalendar-2.6.1/fullcalendar.min.js"></script>
+<link type="text/css" href="../js/fullcalendar-2.6.1/fullcalendar.css" rel="stylesheet" />
+<link type="text/css" href="calendar.css" rel="stylesheet" />
 
 <script>
 $(document).ready(function() {
@@ -55,7 +55,7 @@ $(document).ready(function() {
 		left: 'title',
 	    },
             allDayDefault: false,
-    	    eventSources: ['/calendar/events.php'],
+    	    eventSources: ['events.php'],
 	  })
 });
 </script>

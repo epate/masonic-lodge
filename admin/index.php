@@ -1,5 +1,5 @@
 <!-- -*- mode: html; -*- -->
-<?php include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc"; ?>
+<?php include __DIR__ . "/../inc/config.inc"; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

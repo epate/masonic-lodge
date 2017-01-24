@@ -33,7 +33,7 @@ function AwardsRecognition()
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <? include __DIR__ . "/../inc/header.html"; ?>
     <title>Awards and Recognition - <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -41,7 +41,7 @@ function AwardsRecognition()
     <h1>Lodge Awards and Recognition</h1>
     <? AwardsRecognition(); ?>
 
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+    <? include __DIR__ . "/../inc/footer.php"; ?>
 
   </body>
 </html>

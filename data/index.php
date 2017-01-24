@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<? include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc"; ?>
+<? include __DIR__ . "/../inc/config.inc"; ?>
 <head>
     <title><?= $cnf_lodgeNameNumber ?> - Data Sources</title>
 </head>
@@ -45,7 +45,7 @@
 function DumpTable($table)
 {
   global $cnf_database;
-    $sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/$cnf_database");
+    $sqlitedb = new SQLite3(__DIR__ . "/../data/$cnf_database");
     $results = $sqlitedb->query("SELECT * FROM $table");
     $results = $sqlitedb->query("SELECT * FROM $table order by " . $results->columnName(0) . " ASC");
 
@@ -71,7 +71,7 @@ function DumpTable($table)
 function DumpCalendar($category)
 {
   global $cnf_database;
-    $sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/$cnf_database");
+    $sqlitedb = new SQLite3(__DIR__ . "/../data/$cnf_database");
     $results = $sqlitedb->query("SELECT * FROM calendar");
     $results = $sqlitedb->query("SELECT * FROM calendar WhERE Category='" . $category . "' AND StartDateTime>Date('now') ORDER BY " . $results->columnName(0) . " ASC");
 
@@ -97,7 +97,7 @@ function DumpCalendar($category)
 function DumpPastMastersTable($table)
 {
   global $cnf_database;
-    $sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/$cnf_database");
+    $sqlitedb = new SQLite3(__DIR__ . "/../data/$cnf_database");
     $results = $sqlitedb->query("SELECT * FROM $table");
     $results = $sqlitedb->query("SELECT * FROM $table order by " . $results->columnName(0) . " ASC");
 

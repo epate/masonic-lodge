@@ -7,7 +7,7 @@
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
     <!-- use https://developers.facebook.com/tools/debug/og/object/ to debug and force re-scrape -->
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <? include __DIR__ . "/../inc/header.html"; ?>
     <title>Virtual Museum - <?= $cnf_lodgeNameNumber ?></title>
     <meta property="og:url" content="http://<?= $_SERVER[SERVER_NAME] ?>/museum/" />
     <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
@@ -49,7 +49,7 @@
 
       </div>
     </div>
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+    <? include __DIR__ . "/../inc/footer.php"; ?>
   </body>
 </html>
 
@@ -62,7 +62,7 @@
       echo "<ul>\n";
       while ($row = $results->fetchArray(SQLITE3_ASSOC))
         {
-	  if ($ylink && file_exists($_SERVER[DOCUMENT_ROOT] . "/years/" . $row[Year] . ".php"))
+	  if ($ylink && file_exists(__DIR__ . "/../years/" . $row[Year] . ".php"))
 	    {
 	      echo "<a href=\"/years/$row[Year].php\" />";
 	      $anchor = true;

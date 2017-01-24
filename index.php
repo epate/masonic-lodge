@@ -2,10 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <? set_include_path(".:/usr/local/lib/php"); ?>
 <?
-include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
-include "$_SERVER[DOCUMENT_ROOT]/inc/functions.inc";
+include $_SERVER['DOCUMENT_ROOT'] . "/inc/config.inc";
+include $_SERVER['DOCUMENT_ROOT'] . "/inc/functions.inc";
 $usefbfeed = true;
-$year = 2017;
 ?>
 <html lang="en" ng-app="Lodge">
   <head>
@@ -28,7 +27,8 @@ $year = 2017;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
     <!-- Custom styles for this template -->
-    <link href="/css/offcanvas.css" rel="stylesheet"></link>
+    <link href="/css/offcanvas.less" rel="stylesheet/less"></link>
+    <script src="/js/less.min.js" type="text/javascript"></script>
     <link href="/css/thickbox.css" rel="stylesheet" type="text/css"></link>
     <link href="/js/colorbox-master/example1/colorbox.css" rel="stylesheet" type="text/css"></link>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -63,7 +63,7 @@ $year = 2017;
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+          <a class="navbar-brand" href=""><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -83,12 +83,12 @@ $year = 2017;
 	    <h1 align=center class="visible-xs"><?= $cnf_lodgeNameNumber ?></h1>
 
 	    <div style="float:left;padding-right:10px;">
-	      <img src="/graphics/<?= $cnf_headerGraphicLeft ?>" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
-	      <img src="/graphics/<?= $cnf_headerGraphicLeft ?>" width=40 height=79 class="img-responsive visible-xs" />
+	      <img src="graphics/<?= $cnf_headerGraphicLeft ?>" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
+	      <img src="graphics/<?= $cnf_headerGraphicLeft ?>" width=40 height=79 class="img-responsive visible-xs" />
             </div>
 	    <div style="float:right;padding-left:10px">
-	      <img src="/graphics/<?= $cnf_headerGraphicRight ?>" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
-	      <img src="/graphics/<?= $cnf_headerGraphicRight ?>" width=40 height=79 class="img-responsive visible-xs" />
+	      <img src="graphics/<?= $cnf_headerGraphicRight ?>" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
+	      <img src="graphics/<?= $cnf_headerGraphicRight ?>" width=40 height=79 class="img-responsive visible-xs" />
             </div>
 	    <h1 align=center class="visible-sm visible-md visible-lg"><?= $cnf_lodgeNameNumber ?></h1>
 	    <p align=center style="color:white">
@@ -101,17 +101,17 @@ $year = 2017;
 
           <div class="row">
 	    <div class="col-md-6">
-	      <p><a href="/calendar/" class="btn btn-primary btn-lg btn-block">This Week at <?= $cnf_lodgeName ?></a>
+	      <p><a href="calendar/" class="btn btn-primary btn-lg btn-block">This Week at <?= $cnf_lodgeName ?></a>
 		<table border=0 width=100%>
 		  <? ThisWeek(7); ?>
 		</table>
 	      </p>
 
 	      <div class="visible-sm visible-xs"  id="majorevents">
-		<p><a href="/years/<?= $year ?>.php" class="btn btn-primary btn-lg btn-block">Major Events for <?= $year ?></a></p>
-		<div style="height:300px;overflow:auto" id="<?= $year==date("Y", time())?"majoreventsdiv":""; ?>">
+		<p><a href="years/<?= $cnf_yearShown ?>.php" class="btn btn-primary btn-lg btn-block">Major Events for <?= $cnf_yearShown ?></a></p>
+		<div style="height:300px;overflow:auto" id="<?= $cnf_yearShown==date("Y", time())?"majoreventsdiv":""; ?>">
 		  <table width=100% cellspacing=0>
-		    <? MajorEvents($year, true); ?>
+		    <? MajorEvents($cnf_yearShown, true); ?>
 		  </table>
 		</div><br>
 	      </div>
@@ -136,10 +136,10 @@ $year = 2017;
 	      </script>
 	      <? } ?>
 <? } ?>
-	      <p><a href="/museum/newsletters/index.php?r=<?= time(); ?>" class="btn btn-primary btn-lg btn-block">Our Newsletter</a></p>
+	      <p><a href="museum/newsletters/index.php?r=<?= time(); ?>" class="btn btn-primary btn-lg btn-block">Our Newsletter</a></p>
 	      <? RecentAshlarsSlider(); ?>
 
-	      <p><a href="/officers/" class="btn btn-primary btn-lg btn-block">Lodge Officers</a></p>
+	      <p><a href="officers/" class="btn btn-primary btn-lg btn-block">Lodge Officers</a></p>
 	      <table width=100%>
 		<tr ng-repeat="officer in lodge.officers">
 		  <td valign=top>{{officer.Title}}</td>
@@ -151,10 +151,10 @@ $year = 2017;
 	    </div>
 	    
 	    <div class="col-md-6 visible-lg visible-md" id="majorevents">
-	      <p><a href="/years/<?= $year ?>.php" class="btn btn-primary btn-lg btn-block">Major Events for <?= $year ?></a></p>
+	      <p><a href="years/<?= $cnf_yearShown ?>.php" class="btn btn-primary btn-lg btn-block">Major Events for <?= $cnf_yearShown ?></a></p>
 	      <div class="visible-lg visible-md">
 		<table width=100% cellspacing=0>
-		  <? MajorEvents($year); ?>	
+		  <? MajorEvents($cnf_yearShown); ?>	
 		</table>
 	      </div>
 	    </div>
@@ -163,7 +163,7 @@ $year = 2017;
 	
 	<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
 	  <div class="list-group">
-	    <? include "$_SERVER[DOCUMENT_ROOT]/inc/menu.inc"; ?>
+	    <? include $_SERVER['DOCUMENT_ROOT'] . "/inc/menu.inc"; ?>
 	  </div>
 	  <div id="topbuttondiv" data-spy="affix">
 	    <button id="topbutton" type="button" class="pull-right btn btn-primary btn-md">Top
@@ -183,14 +183,14 @@ $year = 2017;
     <!-- Bootstrap core JavaScript -->
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="/js/offcanvas.js"></script>
-    <script src="/js/colorbox-master/jquery.colorbox-min.js"></script>
-    <script src="/js/jquery.bxslider/jquery.bxslider.js"></script>
-    <link href="/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet"></link>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script src="js/offcanvas.js"></script>
+    <script src="js/colorbox-master/jquery.colorbox-min.js"></script>
+    <script src="js/jquery.bxslider/jquery.bxslider.js"></script>
+    <link href="js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="<?= $fbfeed_path ?>/core/js/cff.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   
     <style>
       .bx-wrapper .bx-caption {

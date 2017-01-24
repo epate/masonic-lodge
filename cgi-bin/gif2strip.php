@@ -1,5 +1,5 @@
 <?php
-$im = new Imagick($_SERVER[DOCUMENT_ROOT] . "/museum/newsletters/previews/" . $_GET['p']);
+$im = new Imagick(__DIR__ . "/../museum/newsletters/previews/" . $_GET['p']);
 $im->setiteratorindex(0);
 $im->setImageFormat('png');
 $imageStrip = $im->appendImages(false);

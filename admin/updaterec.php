@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('America/New_York');
-include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
-$sqlitedb = new SQLite3("$_SERVER[DOCUMENT_ROOT]/data/$cnf_database");
+include __DIR__ . "/../inc/config.inc";
+$sqlitedb = new SQLite3(__DIR__ . "/../data/$cnf_database");
 
 $rowid = $_POST['rowid'];
 $table = $_POST['table'];

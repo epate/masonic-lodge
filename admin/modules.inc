@@ -1,5 +1,5 @@
 <?php
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/$cnf_database");
+$sqlitedb = new SQLite3(__DIR__ . "/../data/$cnf_database");
 date_default_timezone_set('America/New_York');
 $moduleTitles = [
     "major" => "Major Events",

@@ -6,13 +6,8 @@
       xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <? include __DIR__ . "/../inc/header.html"; ?>
     <title>Past Masters - <?= $cnf_lodgeNameNumber ?></title>
-    <meta property="og:url" content="http://<?= $_SERVER[SERVER_NAME] ?>/years/" />
-    <meta property="og:site_name" content="<?= $cnf_lodgeNameNumber ?>" />
-    <meta property="og:title" content="Past Masters Gallery" />
-    <meta property="og:image" content="http://<?= $_SERVER[SERVER_NAME] ?>/photos/large/1955-Pierce.jpg" />
-    <meta property="og:description" content="The Past Masters of <?= $cnf_lodgeNameNumber ?>" />
   </head>
   <body>
 
@@ -43,8 +38,8 @@ function PMCarousel($table)
     echo "<div class=\"pmslider\">\n";
     while ($row = $results->fetchArray(SQLITE3_ASSOC))
     {
-      if (file_exists("$_SERVER[DOCUMENT_ROOT]/photos/$row[Photo]")) { echo "<div><img src=\"/photos/$row[Photo]\" class=\"pm-img\" width=109 height=150 title=\"$row[Year]\" /></div>\n"; }
-      else  { echo "<div><img src=\"/photos/PastMaster.png\" class=\"pm-img\" width=109 height=150 title=\"$row[Year]\" /></div>\n"; }
+      if (file_exists(__DIR__ . "/../photos/$row[Photo]")) { echo "<div><img src=\"../photos/$row[Photo]\" class=\"pm-img\" width=109 height=150 title=\"" . $row['Year'] . "\" /></div>\n"; }
+      else  { echo "<div><img src=\"../photos/PastMaster.png\" class=\"pm-img\" width=109 height=150 title=\"" . $row['Year'] . "\" /></div>\n"; }
     }
   echo "</div>\n";
 }
@@ -72,22 +67,22 @@ function GetPastMasters($table, $ylink)
             echo "<div class=\"row\">\n";
             echo "  <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n";
             echo "    <h2>";
-	    if ($ylink && file_exists($row[Year] . ".php")) { echo "<a href=\"$row[Year].php\" id=\"$row[Year]\" />"; }
+	    if ($ylink && file_exists($row['Year'] . ".php")) { echo "<a href=\"" . $row['Year'] . ".php\" id=\"" . $row['Year'] . "\" />"; }
             echo "$row[Year]";
-            if ($ylink && file_exists($row[Year] . ".php")) { echo "</a>"; }
+            if ($ylink && file_exists($row['Year'] . ".php")) { echo "</a>"; }
             echo "</h2>\n";
             echo "  </div>\n";
             echo "  <div class=\"col-xs-12 col-sm-10 col-md-10 col-lg-10\">\n";
             echo "    <div style=\"width:100%\">\n";
             echo "      <div style=\"float:left;width:130px;\">\n";
-	    if (file_exists("$_SERVER[DOCUMENT_ROOT]/photos/$row[Photo]"))
+	    if (file_exists(__DIR__ . "/../photos/$row[Photo]"))
 	      {
 		echo "	<a href=\"/photos/large/$row[Photo]\" class=\"thickbox\" title=\"$row[Name]\">\n";
-		echo "	  <img src=\"/photos/$row[Photo]\" class=\"img-thumbnail\" /></a>\n";
+		echo "	  <img src=\"../photos/$row[Photo]\" class=\"img-thumbnail\" /></a>\n";
 	      }
 	    else
 	      {
-		echo "	  <img src=\"/photos/PastMaster.png\" class=\"img-thumbnail\" /></a>\n";
+		echo "	  <img src=\"../photos/PastMaster.png\" class=\"img-thumbnail\" /></a>\n";
 	      }
             echo "      </div>\n";
             echo "      <div style=\"margin-left:130px;\">\n";
@@ -107,10 +102,10 @@ function GetPastMasters($table, $ylink)
 }
 ?>
 
-<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+<? include __DIR__ . "/../inc/footer.php"; ?>
 
-<script src="/js/jquery.bxslider/jquery.bxslider.js"></script>
-<link href="/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+<script src="../js/jquery.bxslider/jquery.bxslider.js"></script>
+<link href="../js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
 <style>
     .bx-wrapper .bx-caption {
 	position: absolute;

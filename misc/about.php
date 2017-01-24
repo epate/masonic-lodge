@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="/css/stylesheet.css" type="text/css" />
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <? include __DIR__ . "/../inc/header.html"; ?>
     <title>About Freemasonry and <?= $cnf_lodgeNameNumber ?></title>
   </head>
   <body>
@@ -70,7 +70,7 @@
       honorable relations with others and be willing to share in Masonic
       activities.</p>
     
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+    <? include __DIR__ . "/../inc/footer.php"; ?>
     
   </body>
 </html>

@@ -5,7 +5,7 @@
 <head>
   <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
   <link type="text/css" href="/calendar/calendar.css" rel="stylesheet" />
-  <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+  <? include __DIR__ . "/../inc/header.html"; ?>
   <title>Coming Up - <?= $cnf_lodgeNameNumber ?></title>
 </head>
 <body>
@@ -20,7 +20,7 @@
 <? CalendarListView(); ?>
 </table>
 
-<? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+<? include __DIR__ . "/../inc/footer.php"; ?>
 
 </body>
 </html>

@@ -376,7 +376,6 @@ function ThisWeek($Limit = 999)
   $sql .= "WHERE StartDateTime>strftime('%Y-%m-%d %H:00','now','" . date("P") . "') AND ";
   $sql .= "StartDateTime<strftime('%Y-%m-%d %H:00','now','" . date("P") . "','+7 days') ";
   $sql .= "ORDER BY StartDateTime LIMIT $Limit";
-  error_log($sql);
   $results = $sqlitedb->query($sql);
 
   $PrevMonthString = "";
@@ -584,11 +583,14 @@ function loadOfficers()
 
 function GetTopMenu($m)
 {
-  $items = file(__DIR__ . "/../inc/$m", FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
+  $items = file($_SERVER['DOCUMENT_ROOT'] . "/inc/$m", FILE_IGNORE_NEW_LINES|FILE_SKIP_EMPTY_LINES);
   foreach ($items as $item)
     {
       $item = preg_replace("/ class=\".*\"/", '', $item);
-      echo "            <li class=\"visible-xs\">$item</li>\n";
+      preg_match("/cnf_[^)]*/", $item, $matches);
+      if ($GLOBALS[$matches[0]]) {
+	echo "          <li class=\"visible-xs\">$item</li>\n";
+      }
     }
 }
 

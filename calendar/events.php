@@ -1,12 +1,12 @@
 <?php
-include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
+include __DIR__ . "/../inc/config.inc";
 date_default_timezone_set('America/New_York');
 
 $start = 0; $end = 9999999999;
 if (array_key_exists('start', $_REQUEST)) { $start = $_REQUEST['start']; }
 if (array_key_exists('end', $_REQUEST)) { $end = $_REQUEST['end']; }
 
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . "/data/$cnf_database");
+$sqlitedb = new SQLite3(__DIR__ . "/../data/$cnf_database");
 
 $sql  = "SELECT StartDateTime, EndTime, Description, Location, Category FROM calendar ";
 $sql .= "WHERE StartDateTime>strftime(\"$start\") AND StartDateTime<=strftime(\"$end\") UNION ALL ";

@@ -3,8 +3,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"></link>
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/header.html"; ?>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css"></link>
+    <? include __DIR__ . "/../inc/header.html"; ?>
     <title><?= $cnf_lodgeNameNumber ?> - 2017</title>
   </head>
 
@@ -16,7 +16,7 @@
 	<? GetBiography("2017"); ?>
 	
 	<h2>Lodge Officers</h2>
-	<? ImageResponsive('/photos/2017-Officers.jpg'); ?>
+	<? ImageResponsive('../photos/2017-Officers.jpg'); ?><br/>
 	<span class="courtesyof">Photo courtesy of Right Worshipful Emmett "Buddy" Pate</span><br/>
 	left to right<br/>
 	<table>
@@ -50,6 +50,6 @@
 	<? Newsletters("2017"); ?>
       </div>
     </div>
-    <? include "$_SERVER[DOCUMENT_ROOT]/inc/footer.php"; ?>
+    <? include __DIR__ . "/../inc/footer.php"; ?>
   </body>
 </html>

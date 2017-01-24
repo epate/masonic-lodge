@@ -7,14 +7,15 @@ $cnf_lodgeCityStateZip = "Masonville, VA 12345";
 $cnf_statedMeetings = "2<sup>nd</sup> Tuesday at 7:00PM, Dinner at 6:00PM";
 $cnf_annualStated = "second tuesday of december";
 $cnf_workMeetings = "7:30PM";
+$cnf_yearShown = 2017;
 
 $cnf_webmasterName = "Eldon Luth";
 $cnf_webmasterEmail = "webmaster@internetlodge123.org";
 
 $cnf_headerGraphicLeft = "jachin.png";
 $cnf_headerGraphicRight = "boaz.png";
-$cnf_mainColor = "orange";
-$cnf_mainColorDark = "darkorange";
+$cnf_mainColor = "green";
+$cnf_mainColorDark = "darkgreen";
 
 // lodge description shown on home page
 $cnf_lodgeDescription = "
@@ -49,5 +50,5 @@ $cnf_menuAwards = true;
 $cnf_menuMuseum = true;
 
 // use an alternate database
-$cnf_database = "database.db";
+$cnf_database = "virginiabeach.db";
 ?>

@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('America/New_York');
-include "$_SERVER[DOCUMENT_ROOT]/inc/config.inc";
-$sqlitedb = new SQLite3($_SERVER[DOCUMENT_ROOT] . '/data/$cnf_database');
+include __DIR__ . "/../inc/config.inc";
+$sqlitedb = new SQLite3(__DIR__ . '/../data/$cnf_database');
 
 $start = 0; $end = 9999999999;
 if (array_key_exists('start', $_REQUEST)) { $start = $_REQUEST['start']; }
