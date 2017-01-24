@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Website Administration"
-#AuthUserFile /var/www/masoniclodge.org/admin/.htpasswd
-#Require valid-user
