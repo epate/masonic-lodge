@@ -183,14 +183,14 @@ $usefbfeed = true;
     <!-- Bootstrap core JavaScript -->
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="js/offcanvas.js"></script>
-    <script src="js/colorbox-master/jquery.colorbox-min.js"></script>
-    <script src="js/jquery.bxslider/jquery.bxslider.js"></script>
-    <link href="js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet"></link>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script src="/js/offcanvas.js"></script>
+    <script src="/js/colorbox-master/jquery.colorbox-min.js"></script>
+    <script src="/js/jquery.bxslider/jquery.bxslider.js"></script>
+    <link href="/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="<?= $fbfeed_path ?>/core/js/cff.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
   
     <style>
       .bx-wrapper .bx-caption {
