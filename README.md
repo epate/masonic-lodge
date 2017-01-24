@@ -30,6 +30,9 @@ in offcanvas.less: @main-color and @main-color-dark
 The site is driven by a SQLite3 database. By default, the site looks for "database.db" but can
 be changed via the $cnf_database variable in inc/config.inc.
 
+The database is managed via the Administrative module accessed from http://domain.com/admin or,
+if necessary, the included phpLiteAdmin application at http://domain.com/admin/phpliteadmin
+
 ## Securing /admin
 
 The /admin directory should be secured using whatever method is appropriate for
@@ -41,3 +44,9 @@ AuthUserFile /path/to/the/.htpasswd
 Require valid-user
 
 ```
+
+## Caveats
+
+* in its current state, the site must be installed at DocumentRoot on your web server
+* the "Yearly" pages contained in /years must be created manually. There are some simple examples
+provided. Creating these pages via the Admin application is a work-in-progress.
