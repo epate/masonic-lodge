@@ -83,12 +83,12 @@ $usefbfeed = true;
 	    <h1 align=center class="visible-xs"><?= $cnf_lodgeNameNumber ?></h1>
 
 	    <div style="float:left;padding-right:10px;">
-	      <img src="graphics/<?= $cnf_headerGraphicLeft ?>" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
-	      <img src="graphics/<?= $cnf_headerGraphicLeft ?>" width=40 height=79 class="img-responsive visible-xs" />
+	      <img src="graphics/<?= $cnf_headerGraphicLeft ?>" height=126 class="img-responsive visible-sm visible-md visible-lg" />
+	      <img src="graphics/<?= $cnf_headerGraphicLeft ?>" height=79 class="img-responsive visible-xs" />
             </div>
 	    <div style="float:right;padding-left:10px">
-	      <img src="graphics/<?= $cnf_headerGraphicRight ?>" width=64 height=126 class="img-responsive visible-sm visible-md visible-lg" />
-	      <img src="graphics/<?= $cnf_headerGraphicRight ?>" width=40 height=79 class="img-responsive visible-xs" />
+	      <img src="graphics/<?= $cnf_headerGraphicRight ?>" height=126 class="img-responsive visible-sm visible-md visible-lg" />
+	      <img src="graphics/<?= $cnf_headerGraphicRight ?>" height=79 class="img-responsive visible-xs" />
             </div>
 	    <h1 align=center class="visible-sm visible-md visible-lg"><?= $cnf_lodgeNameNumber ?></h1>
 	    <p align=center style="color:white">
