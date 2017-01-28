@@ -4,7 +4,6 @@
 <?
 include $_SERVER['DOCUMENT_ROOT'] . "/inc/config.inc";
 include $_SERVER['DOCUMENT_ROOT'] . "/inc/functions.inc";
-$usefbfeed = false;
 ?>
 <html lang="en" ng-app="Lodge">
   <head>
@@ -16,13 +15,6 @@ $usefbfeed = false;
     <meta name="description" content="<?= $cnf_lodgeNameNumber ?>"></meta>
     <meta name="author" content=""></meta>
     <link href="/graphics/favicon.ico" rel="shortcut icon"></link>
-    <?
-       if ($usefbfeed) {
-       $fbfeed_path = 'fbfeed';
-       include $fbfeed_path . '/fbfeed-settings.php';
-       echo "\n";
-       }
-    ?>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     
@@ -39,7 +31,6 @@ $usefbfeed = false;
   </head>
   
   <style>
-  .fb-like-box, .fb-like-box span, .fb-like-box span iframe[style] { width: 100% !important; }
   td.majorevents {
       background-color: white;
       font-weight: bold;
@@ -118,23 +109,20 @@ $usefbfeed = false;
 
 <? if ($cnf_facebook) { ?>
 	      <p><a href="<?= $cnf_facebookPage ?>" target="_blank" class="btn btn-primary btn-lg btn-block">Find us on Facebook</a></p>
-	      <!-- Facebook Panel on Home Page Only -->
-	      <div id="fb-root"></div>
-	      <? if ($usefbfeed) { ?>
-	      <?php fbFeed($settings); ?><br/>
-	      <? } else { ?>
-	      <div style="height:400px" class="fb-like-box" data-href="<?= $cnf_facebookPage ?>" xdata-height="400" xdata-width="350" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false" data-force-wall="false"></div>
-	      
-	      <script>
-		(function(d, s, id) {
+	      <div class="fb-page"
+		   data-href="<?= $cnf_facebookPage ?>"
+		   data-tabs="timeline"
+		   hide-cover="true" data-adapt-container-width="true" data-hide-cover="false" data-width="500" 
+		   data-show-facepile="true">
+		</div>
+	      <script>(function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
 		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1397803273815357&version=v2.0";
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=1397803273815357";
 		fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	      </script>
-	      <? } ?>
 <? } ?>
 
 <? if ($cnf_menuNewsletters) { ?>
@@ -190,10 +178,20 @@ $usefbfeed = false;
     <script src="/js/jquery.bxslider/jquery.bxslider.js"></script>
     <link href="/js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet"></link>
     <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="<?= $fbfeed_path ?>/core/js/cff.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
-  
+    <script>		
+    var TIMEOUT = null;
+    $(window).on('resize', function() {
+    if (TIMEOUT === null) {
+	TIMEOUT = window.setTimeout(function() {
+	    TIMEOUT = null;
+	    $('.fb-page').removeClass('fb_iframe_widget fb_iframe_widget_fluid');
+	    FB.XFBML.parse();
+	}, 300);
+    }
+   });	
+    </script>
     <style>
       .bx-wrapper .bx-caption {
       position: absolute;
