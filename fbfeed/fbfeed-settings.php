@@ -1,7 +1,7 @@
 <?php
 $settings = array(
      /* mandatory settings */
-    'license'           => 'b34882e33e29f9c2bf0b5436be31df90',
+    'license'           => 'LICENCE_KEY',
     'access_token'      => 'OPTIONAL_ACCESS_TOKEN_HERE',
     'id'                => 'GrandLodgeVirginia',
     'pagetype'          => 'page',

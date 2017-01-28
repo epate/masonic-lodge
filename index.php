@@ -4,7 +4,7 @@
 <?
 include $_SERVER['DOCUMENT_ROOT'] . "/inc/config.inc";
 include $_SERVER['DOCUMENT_ROOT'] . "/inc/functions.inc";
-$usefbfeed = true;
+$usefbfeed = false;
 ?>
 <html lang="en" ng-app="Lodge">
   <head>
