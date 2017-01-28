@@ -241,10 +241,10 @@ function Newsletters($Year = "")
   echo "</table></div>\n";
 }
 
-function RecentAshlars()
+function RecentNewsletters()
 {
-  $ashlars = glob(__DIR__ . "/../museum/newsletters/[0-9]*.pdf");
-  rsort($ashlars);
+  $newsletters = glob(__DIR__ . "/../museum/newsletters/[0-9]*.pdf");
+  rsort($newsletters);
   
   echo "\n<table border= width=100%>\n";
   echo "<tr>\n";
@@ -253,7 +253,7 @@ function RecentAshlars()
   $count = 0;
   $column = 0;
 
-  foreach ($ashlars as $m)
+  foreach ($newsletters as $m)
     {
       $file = basename($m);
       $year = substr($file, 0, 4);
@@ -280,16 +280,16 @@ function RecentAshlars()
   echo "</table>\n";
 }
 
-function RecentAshlarsSlider()
+function RecentNewslettersSlider()
 {
-  $ashlars = glob(__DIR__ . "/../museum/newsletters/[0-9]*.pdf");
-  rsort($ashlars);
+  $newsletters = glob(__DIR__ . "/../museum/newsletters/[0-9]*.pdf");
+  rsort($newsletters);
   
   echo "  <ul class=\"bxslider\">\n";
   $count = 0;
   $column = 0;
 
-  foreach ($ashlars as $m)
+  foreach ($newsletters as $m)
     {
       $file = basename($m);
       $year = substr($file, 0, 4);

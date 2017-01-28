@@ -136,9 +136,11 @@ $usefbfeed = true;
 	      </script>
 	      <? } ?>
 <? } ?>
-	      <p><a href="museum/newsletters/index.php?r=<?= time(); ?>" class="btn btn-primary btn-lg btn-block">Our Newsletter</a></p>
-	      <? RecentAshlarsSlider(); ?>
 
+<? if ($cnf_menuNewsletters) { ?>
+	      <p><a href="museum/newsletters/index.php?r=<?= time(); ?>" class="btn btn-primary btn-lg btn-block">Our Newsletter</a></p>
+	      <? RecentNewslettersSlider(); ?>
+<? } ?>
 	      <p><a href="officers/" class="btn btn-primary btn-lg btn-block">Lodge Officers</a></p>
 	      <table width=100%>
 		<tr ng-repeat="officer in lodge.officers">
@@ -149,7 +151,7 @@ $usefbfeed = true;
 	      </table>
 	      
 	    </div>
-	    
+
 	    <div class="col-md-6 visible-lg visible-md" id="majorevents">
 	      <p><a href="years/<?= $cnf_yearShown ?>.php" class="btn btn-primary btn-lg btn-block">Major Events for <?= $cnf_yearShown ?></a></p>
 	      <div class="visible-lg visible-md">
